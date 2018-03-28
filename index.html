@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Force Directed Graph of State Contiguity</title>
+    <link rel="stylesheet" href="flags.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <style media="screen">
+      #graph {
+        width: 900px;
+        margin: 0 auto;
+        padding: 0;
+        background: rgba(255,255,255,0.5);
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 100%;
+      }
+
+      .background {
+        position: absolute;
+        z-index: -100;
+        width: 900px;
+        height: 900px;
+        background: url("globe.png");
+        background-size: contain;
+      }
+
+      .link {
+        stroke: #777;
+        stroke-width: 1.5px;
+      }
+
+      .flags {
+        position: absolute;
+      }
+
+      .tooltip {
+        position: absolute;
+        pointer-events: none;
+        background: rgba(0,0,0,0.7);
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: white;
+      }
+
+      body {
+        text-align: center;
+        background: url("space.png");
+        color: white;
+        font-family: 'Titillium Web', sans-serif;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Force Directed Graph of State Contiguity</h1>
+
+    <div id="graph">
+      <div class="background"></div>
+      <div class="flags"></div>
+    </div>
+
+    <footer>Ngoc Nguyen - March 2018</footer>
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+
+</html>
